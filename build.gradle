@@ -16,7 +16,7 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
-mainClassName = "io.iqpizza6349.subflow.Main"
+mainClassName = "io.iqpizza6349.subflow.MainApp"
 
 jlink {
     options.addAll([ '--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages' ])

@@ -1,4 +1,4 @@
-package io.iqpizza6349.subflow.window;
+package io.iqpizza6349.subflow;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -6,11 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class MainWindow extends Application {
-
-    public void launchApplication(String[] args) {
-        launch(args);
-    }
+public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
@@ -31,5 +27,9 @@ public class MainWindow extends Application {
 
         // Display the window
         primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
