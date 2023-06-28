@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.9'
     id 'org.beryx.jlink' version '2.24.4'
 }
@@ -11,12 +12,15 @@ repositories {
     mavenCentral()
 }
 
+application {
+    mainModule = 'io.iqpizza6349.subflow'
+    mainClass = 'io.iqpizza6349.subflow.MainApp'
+}
+
 javafx {
     version = '17'
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
-
-mainClassName = "io.iqpizza6349.subflow.MainApp"
 
 jlink {
     options.addAll([ '--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages' ])
@@ -26,6 +30,7 @@ jlink {
 }
 
 dependencies {
+    implementation 'org.controlsfx:controlsfx:11.1.2'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
