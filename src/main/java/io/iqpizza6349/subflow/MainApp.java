@@ -1,7 +1,7 @@
-package io.iqpizza.subflow;
+package io.iqpizza6349.subflow;
 
-import io.iqpizza.subflow.window.menu.WindowMenu;
-import io.iqpizza.subflow.window.menu.MenuType;
+import io.iqpizza6349.subflow.window.menu.MenuType;
+import io.iqpizza6349.subflow.window.menu.WindowMenu;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
