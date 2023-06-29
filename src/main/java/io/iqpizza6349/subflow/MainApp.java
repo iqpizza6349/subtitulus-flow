@@ -3,8 +3,8 @@ package io.iqpizza6349.subflow;
 import io.iqpizza6349.subflow.window.menu.MenuType;
 import io.iqpizza6349.subflow.window.menu.WindowMenu;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.StackPane;
@@ -14,15 +14,13 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("SubtitulusFlow");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("controller/video-editor.fxml"));
 
         // Create the root layout (e.g., StackPane)
         StackPane root = new StackPane();
-
-        // Add components or content to the layout
-        Label label = new Label("Hello, JavaFX!");
-        root.getChildren().add(label);
+        root.setStyle("-fx-background-color: #303030");
 
         // Add menu, and menu items to the menubar
         Menu fileMenu = new WindowMenu(MenuType.FILE);
