@@ -32,6 +32,9 @@ public class MainApp extends Application {
         VBox vBox = new VBox(menuBar);
         root.getChildren().add(vBox);
 
+        // Add components or content to the layout
+        root.getChildren().add(loader.load());
+
         // Create the scene with layout
         Scene scene = new Scene(root, 1024, 768);
 
