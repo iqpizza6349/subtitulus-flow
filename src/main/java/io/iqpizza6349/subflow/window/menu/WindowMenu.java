@@ -2,6 +2,7 @@ package io.iqpizza6349.subflow.window.menu;
 
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Stage;
 
 /**
  * This class is defines menu and menu item wrapper class that
@@ -16,20 +17,29 @@ import javafx.scene.control.MenuItem;
  */
 public class WindowMenu extends Menu {
 
-    public WindowMenu(String text) {
+    private final Stage stage;
+
+    public WindowMenu(String text, Stage stage) {
         super(text);
+        this.stage = stage;
     }
 
-    public WindowMenu(String text, MenuItem... items) {
+    public WindowMenu(String text, Stage stage, MenuItem... items) {
         super(text, null, items);
+        this.stage = stage;
     }
 
-    public WindowMenu(MenuType type) {
-        super(type.name().toLowerCase(), null, type.items());
+    public WindowMenu(MenuType type, Stage stage) {
+        super(type.name().toLowerCase(), null, type.items(stage));
+        this.stage = stage;
     }
 
     public WindowMenu addSubItems(MenuItem... items) {
         getItems().addAll(items);
         return this;
+    }
+
+    public Stage getStage() {
+        return stage;
     }
 }
