@@ -22,9 +22,7 @@ public class OpenFileInteraction implements FileInteraction {
     public void openFile(EventInteraction interaction) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
-                new ExtensionFilter("그림 파일: Image Files", "*.png", "*.jpg"),
-                new ExtensionFilter("음악 파일: Audio Files", "*.wav", "*.mp3", "*.aac", "*.ogg"),
-                new ExtensionFilter("동영상 파일: Video Files", "*.mp4", "*.mpv", "*.mkv")
+                new ExtensionFilter(FileFilterType.VIDEO.description(), FileFilterType.VIDEO.extensions())
         );
 
         File file = fileChooser.showOpenDialog(interaction.getStage());
