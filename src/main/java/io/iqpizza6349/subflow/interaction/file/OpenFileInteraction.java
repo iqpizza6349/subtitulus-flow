@@ -19,7 +19,7 @@ public class OpenFileInteraction implements FileInteraction {
     public static final Logger log = LogManager.getLogger(OpenFileInteraction.class);
 
     @Override
-    public void openFile(EventInteraction interaction) {
+    public File openFile(EventInteraction interaction) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
                 new ExtensionFilter(FileFilterType.VIDEO.description(), FileFilterType.VIDEO.extensions())
@@ -27,10 +27,14 @@ public class OpenFileInteraction implements FileInteraction {
 
         File file = fileChooser.showOpenDialog(interaction.getStage());
         if (file != null) {
-            log.info("this is file path: {} that you choose", file.getPath());
+            if (log.isDebugEnabled()) {
+                log.debug("this is file path: {} that you choose", file.getPath());
+            }
         }
         else {
             log.warn("You did not choose anything");
         }
+
+        return file;
     }
 }

@@ -2,6 +2,8 @@ package io.iqpizza6349.subflow.interaction.file;
 
 import io.iqpizza6349.subflow.interaction.EventInteraction;
 
+import java.io.File;
+
 /**
  * This interface is made because open file or directory, or save file.
  * This is not function interface, do not recommend to use like a function
@@ -13,6 +15,6 @@ import io.iqpizza6349.subflow.interaction.EventInteraction;
  */
 public interface FileInteraction {
 
-    void openFile(EventInteraction interaction);
+    File openFile(EventInteraction interaction);
 
 }
