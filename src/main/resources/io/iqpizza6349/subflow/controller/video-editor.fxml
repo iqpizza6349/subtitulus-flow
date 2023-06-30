@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="io.iqpizza6349.subflow.controller.VideoController"
+            prefHeight="768.0" prefWidth="1024.0">
+    <children>
+        <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="432.0" prefWidth="359.0">
+            <children>
+                <Button fx:id="button" onAction="#onHelloButtonClick" contentDisplay="CENTER" layoutX="7.0" layoutY="34.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #424242;" text="+" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                    <effect>
+                        <Glow />
+                    </effect></Button>
+                <ImageView fitHeight="79.0" fitWidth="97.0" layoutX="96.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
