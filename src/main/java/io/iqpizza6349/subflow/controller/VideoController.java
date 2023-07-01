@@ -6,19 +6,14 @@ import io.iqpizza6349.subflow.interaction.file.OpenFileInteraction;
 import io.iqpizza6349.subflow.util.ThumbnailExtractor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 /**
  * This controller class is interact with video-editor.fxml
@@ -58,5 +53,4 @@ public class VideoController {
         File thumbnail = ThumbnailExtractor.extractThumbnail(file);
         edVideo1.setImage(new Image(thumbnail.getPath()));
     }
-
 }
