@@ -43,3 +43,6 @@ bin/
 
 ### Logging Files ###
 logs/
+
+### Thumbnail Tempary Images ###
+tmp/
