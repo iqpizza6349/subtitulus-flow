@@ -10,7 +10,9 @@ module io.iqpizza6349.subflow {
     requires jcodec;
     requires java.desktop;
 
+    requires org.reflections;
+
     opens io.iqpizza6349.subflow.controller to javafx.fxml;
-    opens io.iqpizza6349.subflow to jcodec;
+    opens io.iqpizza6349.subflow to jcodec, org.reflections;
     exports io.iqpizza6349.subflow;
 }
